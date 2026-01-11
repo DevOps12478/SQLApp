@@ -1,0 +1,27 @@
+
+@model IEnumerable<ProductsMvc.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+<h2>Products</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price.ToString("C")</td>
+            <td>@p.Stock</td>
+        </tr>
+    }
+    </tbody>
+</table>
