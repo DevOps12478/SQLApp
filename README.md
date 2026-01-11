@@ -5,7 +5,7 @@ A minimal ASP.NET Core MVC app that lists products from SQL Server.
 
 ## Prerequisites
 - Visual Studio 2022 (or later) with .NET SDK (net8.0)
-- Access to SQL Server `mk-sqlsrv-prod` and database `ProductsDb437`
+- Access to SQL Server `YOUR_SQL_SERVER ` and database `ProductsDb`
 
 ## Configure & Run
 1. Open `ProductsMvc.csproj` in Visual Studio.
@@ -16,7 +16,7 @@ A minimal ASP.NET Core MVC app that lists products from SQL Server.
 ## SQL Table
 Use this script to create the table if it does not exist:
 ```sql
-USE [ProductsDb437];
+USE [ProductsDb];
 IF OBJECT_ID('dbo.Products','U') IS NULL
 BEGIN
     CREATE TABLE dbo.Products (
